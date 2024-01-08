@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>派大星的奇遇冒险</title>
+    <link rel="shortcut icon" href="./favicon.ico">
+    <style>
+        /* 重置默认样式 */
+        body,
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 设置背景颜色和文字颜色 */
+        body {
+            /* background-color: rgb(250, 222, 218);
+         */
+            background: linear-gradient(rgb(147, 212, 231), rgb(74, 119, 187));
+            color: #333;
+            font-family: Arial, sans-serif;
+            /* margin: 20px; */
+            padding: 0 20px;
+        }
+
+        /* 设置页眉样式 */
+        .head {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            background-color: rgb(39, 31, 103);
+            text-align: left;
+            padding: 10px 0;
+
+        }
+
+        .head-h img {
+            width: 100%;
+        }
+
+        .head li {
+            font-weight: 600;
+            display: inline;
+            padding: 10px 40px 10px 40px;
+            /* padding-right: 20px;
+        padding-left: 40px;
+        padding-top: 10px; */
+            font-size: px;
+            color: #fff;
+        }
+
+        .head li:hover {
+            background-color: #301ca3;
+        }
+
+        .head li:last-child {
+            margin-right: 0;
+        }
+
+        .head li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition-property: all;
+            transition-duration: 0.5s;
+        }
+
+        .head li a:hover {
+            color: pink;
+
+        }
+
+        /* 设置标题样式 */
+        h4 {
+            font-size: 24px;
+            /* margin-top: 20px; */
+            padding-bottom: 10px;
+            border-bottom: 1px solid #414141;
+        }
+
+        /* 设置段落样式 */
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-top: 5px;
+            font-size: 18px;
+            text-indent: 2em;
+        }
+
+        /* 设置目录列表样式 */
+        ul {
+            list-style-type: disc;
+            /* margin-left: 20px; */
+        }
+
+        ul li {
+            list-style-type: none;
+            margin-top: 5px;
+            font-size: 18px;
+        }
+
+        ul li:hover {
+            font-weight: 600;
+            cursor: default;
+        }
+
+        /* 设置版权信息样式 */
+        a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        /* 添加 hover 效果 */
+        .body_e {
+            display: flex;
+            /* height: 420px; */
+            border: 3px dotted #1f1e1e;
+            margin-top: 20px;
+        }
+
+        .diqiuri {
+            flex: 60%;
+            width: 60%;
+            margin-left: 10px;
+            margin-right: 10px;
+
+        }
+
+        .mulu {
+            flex: 20%;
+            width: 15%;
+            margin-left: 10px;
+        }
+
+        .do {
+            flex: 20%;
+            width: 15%;
+            margin-left: 10px;
+
+        }
+
+        .box {
+            display: flex;
+
+        }
+
+        .box-img {
+            flex: 30%;
+            width: 290px;
+            height: 310px;
+        }
+
+        .box-img .pdx {
+            width: 300px;
+            height: 300px;
+            border-radius: 10px;
+            box-shadow: 0 3px 3px 3px rgb(36, 99, 161);
+            margin: auto;
+            transition-property: all;
+            transition-duration: 0.8s;
+        }
+
+        .box-son p {
+            color: #000;
+        }
+
+        .pdx:hover {
+            width: 310px;
+            height: 310px;
+        }
+
+        .box-son {
+            flex: 60%;
+            margin-left: 20px;
+            margin-right: 10px;
+            /* border-image: ; */
+        }
+
+        /* 头像 */
+        .a-box {
+            background-color: rgb(39, 31, 103);
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+        }
+
+        .touxiang {
+            width: 50px;
+        }
+
+        .a-tx {
+            font-size: 18px;
+            color: rgb(31, 31, 37);
+        }
+
+        .tx-span {
+
+            text-align: center;
+            /* background-color: #fff; */
+        }
+
+        .tx-span a.a-tx,
+        .tx-span img.touxiang {
+            margin-right: 20px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .li-tx {
+            width: 260px;
+            height: 50px;
+            /* background-color: #fff; */
+            margin-bottom: 5px;
+            transition-property: all;
+            transition-duration: 0.3s;
+        }
+
+        .li-tx:hover {
+            box-shadow: 0 3px 3px 3px rgb(50, 115, 180);
+            cursor: pointer;
+        }
+
+        .do ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+</head>
+<body>
+
+    <div class="head-h">
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="./imgs/head.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./imgs/head2.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./imgs/head3.jpg" alt=""></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <!-- Swiper JS -->
+        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"> </script>
+
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                cssMode: true,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                },
+                mousewheel: true,
+                keyboard: true,
+            });
+        </script>
+        <ul class="head">
+            <li><a href="#">首页 </a></li>
+            <li><a href="#">目录 </a></li>
+            <li><a href="#">关于我们</a></li>
+            <li><a href="#">联系我们</a></li>
+        </ul>
+    </div>
+    <div class="body_e">
+        <div class="diqiuri">
+            <h4>派大星</h4>
+            <div class="box">
+                <div class="box-img">
+                    <img src="./imgs/77.jpg" alt="" class="pdx">
+                </div>
+                <div class="box-son">
+                    <p>派大星（Patrick
+                        Star）是美国动画片《海绵宝宝》系列的主人公之一，海绵宝宝的好朋友。[1]是一只粉红色的海星，说话嗓音粗，头脑简单，四肢发达，经常给大家制造麻烦。在睡觉或发呆时会不停的流口水。居住在它自己盖的石头下面。在关键时刻会想出绝妙的点子，但下一秒就已经遗忘，在动画片中它反而是说出最多有深刻含义话的人物。
+                    </p>
+                    <p>派大星是一只海星，也是海绵宝宝的朋友，住在隔壁的插着天线的大石头底下。好吃懒做而且无脑，经常一事无成。又称“粉红大胖呆”，没有鼻子，认不得自己的父母，最喜欢看电视，是一个爱电视的海星，不喜欢洗澡，腋下都是毛。
+                        曾经荣获“最懒最粉最什么事都不做的海星”称号。脑子中实际上有无限的智慧，不过平时不会表现出来，只有到了重要关头才会显现，不过经常被海绵宝宝搞砸，破坏力惊人。但实际上派大星十分的聪明。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mulu">
+            <h4>朋友</h4>
+            <ul>
+                <li class="li-tx"><span class="tx-span"><img class="touxiang" src="./imgs/bao.jpg" alt=""><a
+                            class="a-tx" href="#">海绵宝宝</a></span></li>
+                <li class="li-tx"><span class="tx-span"><img class="touxiang" src="./imgs/蟹老板.jpg" alt=""><a
+                            class="a-tx" href="#">蟹老板</a></span></li>
+                <li class="li-tx"><span class="tx-span"><img class="touxiang" src="./imgs/ge.jpg" alt=""><a class="a-tx"
+                            href="#">章鱼哥</a></span></li>
+                <li class="li-tx"><span class="tx-span"><img class="touxiang" src="./imgs/pi.jpg" alt=""><a class="a-tx"
+                            href="#">痞老板</a></span></li>
+                <li class="li-tx"><span class="tx-span"><img class="touxiang" src="./imgs/wo.jpg" alt=""><a class="a-tx"
+                            href="#">小蜗</a></span></li>
+            </ul>
+        </div>
+        <div class="do">
+            <h4>奇遇冒险</h4>
+            <ul>
+                <li title="派大星尝试制作炸药冰淇淋，结果引发了一场混乱">派大星的炸药冰淇淋</li>
+                <li title="派大星决定成为摔跤手，但他的技巧却让人捧腹大笑">派大星的摔跤比赛</li>
+                <li title=" 派大星参加了一个智力比拼，结果令人大跌眼镜">派大星的智商比拼</li>
+                <li title="派大星在城市里走丢，引发了一连串令人啼笑皆非的事件">派大星的迷失冒险</li>
+                <li title="派大星尝试烹饪，但他的料理技能令人捧腹大笑">派大星的美食制作</li>
+                <li title="派大星决定学开车，结果把驾校变成了笑话的中心">派大星的驾驶课</li>
+                <li title="派大星尝试成为超级英雄，但他的超能力却令人哑然失笑">派大星的超级英雄梦</li>
+                <li title="派大星试图成为一名时尚偶像，但他的时装选择常常是滑稽可笑的">派大星的时装秀</li>
+                <li title=" 派大星与章鱼哥展开了一场恶作剧大战，笑料百出">派大星的恶作剧大战</li>
+                <li title="派大星进行了一项科学实验，结果让整个比基尼底下发生了令人啼笑皆非的事情">派大星的科学实验</li>
+            </ul>
+        </div>
+    </div>
+    <br>
+    <div class="a-box"><a href="#">&copy;2023,派大星的奇遇冒险</a></div>
+
+
+</body>
+</html>
